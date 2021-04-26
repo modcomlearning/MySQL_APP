@@ -22,7 +22,9 @@ class ViewFragment : Fragment() {
         // Inflate the layout for this fragment
         //front end  - what the users see
         //specify the url with the data
-        val url = "http://localhost/api/view.php";
+        //use 10.0.2.2 for emulator
+        //using phone  :  http://modcom.co.ke/api/view.php
+        val url = "http://10.0.2.2/api/view.php";
 
         //Front End side
         val root = inflater.inflate(R.layout.fragment_view, container, false)
@@ -44,14 +46,13 @@ class ViewFragment : Fragment() {
                 //Put the response to the textview
                 results.text = response
 
-
             }
 
             override fun onFailure(statusCode: Int, headers: Array<out Header>?, responseBody: ByteArray?, error: Throwable?) {
                 val results = root.findViewById<TextView>(R.id.results)
                 results.text = "Server Error Encountered"
             }
-            
+
         }
         )//post
 

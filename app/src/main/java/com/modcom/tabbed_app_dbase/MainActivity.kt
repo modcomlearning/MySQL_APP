@@ -1,15 +1,16 @@
 package com.modcom.tabbed_app_dbase
 
+
 import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.tabs.TabLayout
-import androidx.viewpager.widget.ViewPager
 import androidx.appcompat.app.AppCompatActivity
-import android.view.Menu
-import android.view.MenuItem
+import androidx.fragment.app.FragmentTransaction
+import androidx.viewpager.widget.ViewPager
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.tabs.TabLayout
 import com.modcom.tabbed_app_dbase.ui.main.SectionsPagerAdapter
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,6 +29,8 @@ class MainActivity : AppCompatActivity() {
             //right click on app - New - Google - Maps Activity
             val intent = Intent(applicationContext, MapsActivity::class.java)
             startActivity(intent)
+
+
         }
     }
 }

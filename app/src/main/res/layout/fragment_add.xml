@@ -1,15 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="@color/purple_200"
     tools:context=".ui.main.AddFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+     <TextView
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:text="Hire Cars - Register"
+         android:layout_marginTop="20dp"
+         android:layout_marginLeft="10dp"
+         android:textSize="30dp"
+         android:textStyle="bold"
+         android:gravity="center"
+         android:layout_marginRight="10dp"/>
+
+    <!-- TODO: Update blank fragment layout -->
+     <EditText
+         android:id="@+id/edit_car_reg"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:hint="Enter Car Reg"
+         android:layout_marginTop="20dp"
+         android:layout_marginLeft="10dp"
+         android:layout_marginRight="10dp"/>
+
+    <EditText
+        android:id="@+id/edit_make"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Make"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+
+    <EditText
+        android:id="@+id/edit_model"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Model"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+
+    <EditText
+        android:id="@+id/edit_mileage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Mileage"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <EditText
+        android:id="@+id/edit_cost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Cost"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <EditText
+        android:id="@+id/edit_capacity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Capacity"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+
+    <Button
+        android:id="@+id/btn_upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload Details"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+</LinearLayout>
