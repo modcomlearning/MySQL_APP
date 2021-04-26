@@ -33,26 +33,22 @@ class AddFragment : Fragment() {
 
 
         //prepare variables(parameters) and url to post
-        val client = AsyncHttpClient(true, 80,443)
-        val parameter = RequestParams()
-        parameter.add("car_reg", car_reg.text.toString())
-        parameter.add("make", make.text.toString())
-        parameter.add("model", model.text.toString())
-        parameter.add("mileage", mileage.text.toString())
-        parameter.add("cost", cost.text.toString())
-        parameter.add("capacity", capacity.text.toString())
-        val url = "http://10.0.2.2/api/add.php";
+
+        upload.setOnClickListener {
+            val client = AsyncHttpClient(true, 80, 443)
+            val parameter = RequestParams()
+            parameter.add("car_reg", car_reg.text.toString())
+            parameter.add("make", make.text.toString())
+            parameter.add("model", model.text.toString())
+            parameter.add("mileage", mileage.text.toString())
+            parameter.add("cost", cost.text.toString())
+            parameter.add("capacity", capacity.text.toString())
+            val url = "http://10.0.2.2/api/add.php";
 
 
+        }//end listener
 
-
-
-
-
-
-
-
-
+        
 
         return root
     }
