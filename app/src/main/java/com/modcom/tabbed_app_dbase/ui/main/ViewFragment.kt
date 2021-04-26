@@ -25,7 +25,6 @@ class ViewFragment : Fragment() {
         //use 10.0.2.2 for emulator
         //using phone  :  http://modcom.co.ke/api/view.php
         val url = "http://10.0.2.2/api/view.php";
-
         //Front End side
         val root = inflater.inflate(R.layout.fragment_view, container, false)
 
