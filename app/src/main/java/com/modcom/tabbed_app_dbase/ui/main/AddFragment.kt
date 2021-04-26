@@ -53,7 +53,6 @@ class AddFragment : Fragment() {
                 override fun onFailure(statusCode: Int, headers: Array<out Header>?, responseBody: ByteArray?, error: Throwable?) {
                     Toast.makeText(activity, "Error, Check Your Connections", Toast.LENGTH_LONG).show()
                 }
-
             }
             )//end post
 
