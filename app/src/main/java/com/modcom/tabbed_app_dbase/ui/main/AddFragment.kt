@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import com.loopj.android.http.AsyncHttpClient
+import com.loopj.android.http.RequestParams
 import com.modcom.tabbed_app_dbase.R
 
 class AddFragment : Fragment() {
@@ -28,7 +30,20 @@ class AddFragment : Fragment() {
         val capacity = root.findViewById<EditText>(R.id.edit_capacity)
         val upload = root.findViewById<Button>(R.id.btn_upload)
 
-        
+
+
+        //prepare variables(parameters) and url to post
+        val client = AsyncHttpClient(true, 80,443)
+        val parameter = RequestParams()
+        parameter.add("car_reg", car_reg.text.toString())
+        parameter.add("make", make.text.toString())
+        parameter.add("model", model.text.toString())
+        parameter.add("mileage", mileage.text.toString())
+        parameter.add("cost", cost.text.toString())
+        parameter.add("capacity", capacity.text.toString())
+        val url = "http://10.0.2.2/api/add.php";
+
+
 
 
 
