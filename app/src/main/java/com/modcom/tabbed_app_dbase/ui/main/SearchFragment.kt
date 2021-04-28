@@ -8,8 +8,10 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import com.loopj.android.http.AsyncHttpClient
+import com.loopj.android.http.AsyncHttpResponseHandler
 import com.loopj.android.http.RequestParams
 import com.modcom.tabbed_app_dbase.R
+import cz.msebera.android.httpclient.Header
 
 
 class SearchFragment : Fragment() {
@@ -27,12 +29,19 @@ class SearchFragment : Fragment() {
             parameter.add("make", make.text.toString())
             val url = "http://10.0.2.2/api/search.php";
 
+            client.post(url, parameter, object: AsyncHttpResponseHandler()
+            {
 
+                override fun onSuccess(statusCode: Int, headers: Array<out Header>?, responseBody: ByteArray?) {
+                    TODO("Not yet implemented")
+                }
 
+                override fun onFailure(statusCode: Int, headers: Array<out Header>?, responseBody: ByteArray?, error: Throwable?) {
+                    TODO("Not yet implemented")
+                }
 
-
-
-
+            }
+            )//end post
 
         }//end listener
 
