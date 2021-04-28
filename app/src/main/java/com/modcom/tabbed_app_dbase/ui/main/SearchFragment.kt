@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 import com.loopj.android.http.AsyncHttpClient
 import com.loopj.android.http.AsyncHttpResponseHandler
 import com.loopj.android.http.RequestParams
@@ -32,14 +34,16 @@ class SearchFragment : Fragment() {
             client.post(url, parameter, object: AsyncHttpResponseHandler()
             {
 
-                override fun onSuccess(statusCode: Int, headers: Array<out Header>?, responseBody: ByteArray?) {
-                    TODO("Not yet implemented")
+                override fun onSuccess(statusCode: Int, headers: Array<out Header>?, responseBody: ByteArray) {
+                    val results = root.findViewById<TextView>(R.id.search_results)
+                    //convert byte array to String
+                    val response = String(responseBody)
+                    results.text = response
                 }
 
                 override fun onFailure(statusCode: Int, headers: Array<out Header>?, responseBody: ByteArray?, error: Throwable?) {
-                    TODO("Not yet implemented")
+                    Toast.makeText(activity, "Failed, Network Error", Toast.LENGTH_SHORT).show()
                 }
-
             }
             )//end post
 
