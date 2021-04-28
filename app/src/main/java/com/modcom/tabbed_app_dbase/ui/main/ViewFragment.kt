@@ -30,7 +30,6 @@ class ViewFragment : Fragment() {
 
         //client a client object
         val client = AsyncHttpClient(true,80,443)
-
         //below object to be used in case we want to submit something to the server
         val parameters =  RequestParams()
 
