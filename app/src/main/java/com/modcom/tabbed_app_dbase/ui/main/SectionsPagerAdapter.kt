@@ -8,7 +8,8 @@ import com.modcom.tabbed_app_dbase.R
 
 private val TAB_TITLES = arrayOf(
         R.string.tab_text_1,
-        R.string.tab_text_2
+        R.string.tab_text_2,
+        R.string.tab_text_3
 )
 
 /**
@@ -29,6 +30,10 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager)
             return ViewFragment()
         }
 
+        else if (position==2){
+            return SearchFragment()
+        }
+
         else{
             // any fragment, to avoid the error
             return AddFragment()
@@ -42,6 +47,6 @@ class SectionsPagerAdapter(private val context: Context, fm: FragmentManager)
 
     override fun getCount(): Int {
         // Show 2 total pages.
-        return 2
+        return 3
     }
 }

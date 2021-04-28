@@ -40,7 +40,6 @@ class SearchFragment : Fragment() {
                     val response = String(responseBody)
                     results.text = response
                 }
-
                 override fun onFailure(statusCode: Int, headers: Array<out Header>?, responseBody: ByteArray?, error: Throwable?) {
                     Toast.makeText(activity, "Failed, Network Error", Toast.LENGTH_SHORT).show()
                 }
