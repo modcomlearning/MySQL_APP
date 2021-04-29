@@ -51,3 +51,5 @@ class Login : AppCompatActivity() {
         }//end listner
     }//end oncreate
 }//end class
+
+//8.30am - 10.30am - mon - fri
