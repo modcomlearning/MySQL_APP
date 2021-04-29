@@ -2,6 +2,7 @@ package com.modcom.tabbed_app_dbase
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.loopj.android.http.AsyncHttpClient
 import com.loopj.android.http.AsyncHttpResponseHandler
 import com.loopj.android.http.RequestParams
@@ -14,7 +15,6 @@ class Login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         //this an activity
-
         btn_login.setOnClickListener{
 
             val client = AsyncHttpClient(true, 80,443)
@@ -31,9 +31,8 @@ class Login : AppCompatActivity() {
                 }
 
                 override fun onFailure(statusCode: Int, headers: Array<out Header>?, responseBody: ByteArray?, error: Throwable?) {
-                    TODO("Not yet implemented")
+                    Toast.makeText(applicationContext, "Failed. Network Error", Toast.LENGTH_LONG).show()
                 }
-
 
             }
             )//end post
