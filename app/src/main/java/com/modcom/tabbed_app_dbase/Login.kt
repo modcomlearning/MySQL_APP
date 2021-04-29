@@ -30,12 +30,12 @@ class Login : AppCompatActivity() {
                 override fun onSuccess(statusCode: Int, headers: Array<out Header>?, responseBody: ByteArray) {
                     val response = String(responseBody)
                     if (response.startsWith("1")){
-                        //successful
+                        //successful - php responds with a 1
                         val x = Intent(applicationContext, MainActivity::class.java)
                         startActivity(x)
                         finish() //kill login as you move to main
                     }
-                    
+
                     else{
                         Toast.makeText(applicationContext, "Login Failed", Toast.LENGTH_LONG).show()
                     }
