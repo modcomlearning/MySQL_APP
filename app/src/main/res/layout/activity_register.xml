@@ -49,6 +49,7 @@
             android:layout_height="wrap_content"
             android:hint="Enter Confirm Password"
             android:layout_marginTop="20dp"
+            android:inputType="textPassword"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"/>
 

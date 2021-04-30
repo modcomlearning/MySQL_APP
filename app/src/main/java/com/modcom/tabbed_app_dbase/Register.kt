@@ -17,13 +17,15 @@ class Register : AppCompatActivity() {
 
         //find the button
         btn_reg_user.setOnClickListener{
-
-            if (edit_reg_password.text.toString() != edit_reg_password_confirm.toString()){
+//check if password are same
+            if (edit_reg_password.text != edit_reg_password_confirm.text){
                 edit_reg_password.setError("Password do not match")
             }
 
 
             else{
+
+                //post data to php api
                val client = AsyncHttpClient(true, 80,443)
                 val parameter = RequestParams()
                 parameter.add("username", edit_reg_username.text.toString())
