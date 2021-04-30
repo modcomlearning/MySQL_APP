@@ -16,6 +16,14 @@ class Login : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         //this an activity
+        //link to register
+        btn_register.setOnClickListener{
+            val x = Intent(applicationContext, Register::class.java)
+            startActivity(x)
+        }
+
+
+
         btn_login.setOnClickListener{
 
             val client = AsyncHttpClient(true, 80,443)
