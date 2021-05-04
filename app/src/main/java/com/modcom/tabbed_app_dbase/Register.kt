@@ -62,9 +62,7 @@ class Register : AppCompatActivity() {
                 edit_reg_email.setError("Invalid Email")
             }
 
-
             else{
-
                 //post data to php api
                val client = AsyncHttpClient(true, 80,443)
                 val parameter = RequestParams()
@@ -84,8 +82,7 @@ class Register : AppCompatActivity() {
                     override fun onFailure(statusCode: Int, headers: Array<out Header>?, responseBody: ByteArray?, error: Throwable?) {
                         Toast.makeText(applicationContext, "Failed , Network connections problem", Toast.LENGTH_LONG).show()
                     }
-                }
-                )
+                })
 
             }
 
