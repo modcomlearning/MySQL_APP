@@ -44,8 +44,14 @@ class Login : AppCompatActivity() {
                         finish() //kill login as you move to main
                     }
 
+                    else if(response.startsWith("2")){
+                        Toast.makeText(applicationContext, "User Does not exist", Toast.LENGTH_LONG).show()
+                    }
+
                     else{
                         Toast.makeText(applicationContext, "Login Failed", Toast.LENGTH_LONG).show()
+                        //code
+
                     }
 
                 }//end on success

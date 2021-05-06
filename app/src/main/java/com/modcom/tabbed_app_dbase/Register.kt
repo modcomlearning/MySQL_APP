@@ -25,7 +25,9 @@ class Register : AppCompatActivity() {
             val str_password_confirm = edit_reg_password_confirm.text.toString()
 
 
-
+             //' oR '1'='1
+            // ' or '1'='1' LIMIT 1 --
+            //enforce password
             val regex1 = ".*[A-Z].*".toRegex()
             val regex2 = ".*[0-9].*".toRegex()
             val regex3 = ".*[a-z].*".toRegex()
@@ -43,6 +45,10 @@ class Register : AppCompatActivity() {
 
             else if (str_password.length < 8){
                 edit_reg_password.setError("Password Must be more than 8-ters")
+            }
+
+            else if (str_password.length > 10){
+                edit_reg_password.setError("Password too long")
             }
 
             else if (str_password != str_password_confirm){
