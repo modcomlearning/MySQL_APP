@@ -37,11 +37,33 @@ class Login : AppCompatActivity() {
             {
                 override fun onSuccess(statusCode: Int, headers: Array<out Header>?, responseBody: ByteArray) {
                     val response = String(responseBody)
+
                     if (response.startsWith("1")){
                         //successful - php responds with a 1
-                        val x = Intent(applicationContext, MainActivity::class.java)
-                        startActivity(x)
-                        finish() //kill login as you move to main
+                        val array = response.split("#")
+                        //Toast.makeText(applicationContext, "resp"+array[1], Toast.LENGTH_LONG).show()
+
+                        if(array[1]=="user"){
+                            val x = Intent(applicationContext, MainActivity::class.java)
+                            startActivity(x)
+                            finish() //kill login as you move to main
+                        }
+
+
+                        else if(array[1]=="admin"){
+                            val x = Intent(applicationContext, AdminMain::class.java)
+                            startActivity(x)
+                            finish() //kill login as you move to main
+                        }
+
+
+                        else{
+                            val x = Intent(applicationContext, Login::class.java)
+                            startActivity(x)
+                            finish() //kill login as you move to main
+                        }
+
+
                     }
 
                     else if(response.startsWith("2")){
