@@ -59,6 +59,10 @@ class Register : AppCompatActivity() {
                 edit_reg_username.setError("Username is Empty")
             }
 
+            else if(str_username.length > 10){
+                edit_reg_username.setError("Username is too long")
+            }
+
 
             else if(str_email.length < 1){
                 edit_reg_email.setError("Email is Empty")

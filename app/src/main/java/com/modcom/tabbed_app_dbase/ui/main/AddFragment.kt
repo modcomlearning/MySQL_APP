@@ -33,6 +33,9 @@ class AddFragment : Fragment() {
 
         //prepare variables(parameters) and url to post
         upload.setOnClickListener {
+
+
+
             val client = AsyncHttpClient(true, 80, 443)
             val parameter = RequestParams()
             parameter.add("car_reg", car_reg.text.toString())
